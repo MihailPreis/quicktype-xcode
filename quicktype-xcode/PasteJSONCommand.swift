@@ -189,7 +189,7 @@ class PasteJSONCommand: NSObject, XCSourceEditorCommand {
         case .pasteJSONAsObjCImplementation:
             return (.objc, ["features": "implementation"])
         default:
-            if let language = languageFor(contentUTI: invocation.buffer.contentUTI as CFString) {
+            if let language = languageFor(contentUTI: invocation.buffer.contentUTI) {
                 return(language, commandOptions[language] ?? [:])
             }
         }

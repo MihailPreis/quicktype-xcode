@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,11 +13,11 @@
 		6317CD161FECC654006CCFC1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CD151FECC654006CCFC1 /* Cocoa.framework */; };
 		6317CD191FECC654006CCFC1 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317CD181FECC654006CCFC1 /* SourceEditorExtension.swift */; };
 		6317CD1B1FECC654006CCFC1 /* PasteJSONCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317CD1A1FECC654006CCFC1 /* PasteJSONCommand.swift */; };
-		6317CD201FECC654006CCFC1 /* quicktype-xcode.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6317CD131FECC654006CCFC1 /* quicktype-xcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6317CD201FECC654006CCFC1 /* quicktype-xcode.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6317CD131FECC654006CCFC1 /* quicktype-xcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6349B5AD1FECF39D00F7AA42 /* quicktype.js in Resources */ = {isa = PBXBuildFile; fileRef = 6349B5AC1FECF39D00F7AA42 /* quicktype.js */; };
 		63BCCEDF1FED99AD00E1C1DB /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCCEDE1FED99AD00E1C1DB /* Runtime.swift */; };
 		D877021225F7EAE5002E3EA3 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D877021125F7EAE5002E3EA3 /* XcodeKit.framework */; };
-		D877021325F7EAE5002E3EA3 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D877021125F7EAE5002E3EA3 /* XcodeKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D877021325F7EAE5002E3EA3 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D877021125F7EAE5002E3EA3 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +31,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6317CD241FECC654006CCFC1 /* Embed App Extensions */ = {
+		6317CD241FECC654006CCFC1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6317CD201FECC654006CCFC1 /* quicktype-xcode.appex in Embed App Extensions */,
+				6317CD201FECC654006CCFC1 /* quicktype-xcode.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D877021425F7EAE5002E3EA3 /* Embed Frameworks */ = {
@@ -158,7 +158,7 @@
 				6317CCFA1FECC5DC006CCFC1 /* Sources */,
 				6317CCFB1FECC5DC006CCFC1 /* Frameworks */,
 				6317CCFC1FECC5DC006CCFC1 /* Resources */,
-				6317CD241FECC654006CCFC1 /* Embed App Extensions */,
+				6317CD241FECC654006CCFC1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -198,8 +198,9 @@
 		6317CCF61FECC5DC006CCFC1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = quicktype;
 				TargetAttributes = {
 					6317CCFD1FECC5DC006CCFC1 = {
@@ -300,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -330,9 +332,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -347,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -360,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -390,9 +395,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -401,10 +408,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -417,12 +425,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W9D824R4EW;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 624FP4UZ44;
 				DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = quicktype/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.quicktype.quicktype;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mprice.quicktype;
 				PRODUCT_NAME = "Paste JSON as Code • quicktype";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -438,12 +450,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W9D824R4EW;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 624FP4UZ44;
 				DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = quicktype/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.quicktype.quicktype;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mprice.quicktype;
 				PRODUCT_NAME = "Paste JSON as Code • quicktype";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -457,12 +473,18 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W9D824R4EW;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 624FP4UZ44;
 				DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "quicktype-xcode/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.quicktype.quicktype-xcode";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mprice.quicktype-xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -477,12 +499,18 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W9D824R4EW;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 624FP4UZ44;
 				DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "quicktype-xcode/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.quicktype.quicktype-xcode";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mprice.quicktype-xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

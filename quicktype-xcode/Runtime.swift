@@ -1,24 +1,23 @@
 import Foundation
 import JavaScriptCore
+import UniformTypeIdentifiers
 
 enum Language: String {
-    case swift, java, cpp, objc, objcHeader
+    case swift, cpp, objc, objcHeader
 }
 
-fileprivate let languageUTIs: [CFString: Language] = [
-    kUTTypeSwiftSource: .swift,
-    kUTTypeObjectiveCSource: .objc,
-    kUTTypeCHeader: .objc,
-    kUTTypeJavaSource: .java,
-    kUTTypeCPlusPlusSource: .cpp,
-    kUTTypeObjectiveCPlusPlusSource: .objc,
-    "com.apple.dt.playground" as CFString: .swift
+fileprivate let languageUTIs: [UTType: Language] = [
+    UTType.swiftSource: .swift,
+    UTType.objectiveCSource: .objc,
+    UTType.cHeader: .objc,
+    UTType.cPlusPlusSource: .cpp,
+    UTType.objectiveCPlusPlusSource: .objc
 ]
 
-func languageFor(contentUTI: CFString) -> Language? {
+func languageFor(contentUTI: String) -> Language? {
     print(contentUTI)
     for (uti, language) in languageUTIs {
-        if UTTypeConformsTo(contentUTI as CFString, uti) {
+        if let contentUTI = UTType(contentUTI), contentUTI.conforms(to: uti) {
             return language
         }
     }
