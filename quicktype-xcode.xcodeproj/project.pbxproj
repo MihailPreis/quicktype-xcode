@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6317CD021FECC5DC006CCFC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317CD011FECC5DC006CCFC1 /* AppDelegate.swift */; };
 		6317CD041FECC5DC006CCFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6317CD031FECC5DC006CCFC1 /* Assets.xcassets */; };
-		6317CD071FECC5DC006CCFC1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6317CD051FECC5DC006CCFC1 /* MainMenu.xib */; };
 		6317CD161FECC654006CCFC1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CD151FECC654006CCFC1 /* Cocoa.framework */; };
 		6317CD191FECC654006CCFC1 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317CD181FECC654006CCFC1 /* SourceEditorExtension.swift */; };
 		6317CD1B1FECC654006CCFC1 /* PasteJSONCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317CD1A1FECC654006CCFC1 /* PasteJSONCommand.swift */; };
 		6317CD201FECC654006CCFC1 /* quicktype-xcode.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6317CD131FECC654006CCFC1 /* quicktype-xcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6349B5AD1FECF39D00F7AA42 /* quicktype.js in Resources */ = {isa = PBXBuildFile; fileRef = 6349B5AC1FECF39D00F7AA42 /* quicktype.js */; };
 		63BCCEDF1FED99AD00E1C1DB /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCCEDE1FED99AD00E1C1DB /* Runtime.swift */; };
+		858B36142ACAF814003B5A40 /* QuicktypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B36132ACAF814003B5A40 /* QuicktypeApp.swift */; };
 		D877021225F7EAE5002E3EA3 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D877021125F7EAE5002E3EA3 /* XcodeKit.framework */; };
 		D877021325F7EAE5002E3EA3 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D877021125F7EAE5002E3EA3 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -57,9 +56,7 @@
 
 /* Begin PBXFileReference section */
 		6317CCFE1FECC5DC006CCFC1 /* Paste JSON as Code • quicktype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paste JSON as Code • quicktype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6317CD011FECC5DC006CCFC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6317CD031FECC5DC006CCFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6317CD061FECC5DC006CCFC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6317CD081FECC5DC006CCFC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6317CD091FECC5DC006CCFC1 /* quicktype_xcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quicktype_xcode.entitlements; sourceTree = "<group>"; };
 		6317CD131FECC654006CCFC1 /* quicktype-xcode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "quicktype-xcode.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +68,7 @@
 		6349B5AC1FECF39D00F7AA42 /* quicktype.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = quicktype.js; sourceTree = "<group>"; };
 		63A69E26201979880069EE72 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		63BCCEDE1FED99AD00E1C1DB /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
+		858B36132ACAF814003B5A40 /* QuicktypeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicktypeApp.swift; sourceTree = "<group>"; };
 		D877021125F7EAE5002E3EA3 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -117,9 +115,8 @@
 		6317CD001FECC5DC006CCFC1 /* quicktype */ = {
 			isa = PBXGroup;
 			children = (
-				6317CD011FECC5DC006CCFC1 /* AppDelegate.swift */,
+				858B36132ACAF814003B5A40 /* QuicktypeApp.swift */,
 				6317CD031FECC5DC006CCFC1 /* Assets.xcassets */,
-				6317CD051FECC5DC006CCFC1 /* MainMenu.xib */,
 				6317CD081FECC5DC006CCFC1 /* Info.plist */,
 				6317CD091FECC5DC006CCFC1 /* quicktype_xcode.entitlements */,
 			);
@@ -242,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6317CD041FECC5DC006CCFC1 /* Assets.xcassets in Resources */,
-				6317CD071FECC5DC006CCFC1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6317CD021FECC5DC006CCFC1 /* AppDelegate.swift in Sources */,
+				858B36142ACAF814003B5A40 /* QuicktypeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,17 +280,6 @@
 			targetProxy = 6317CD1E1FECC654006CCFC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6317CD051FECC5DC006CCFC1 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6317CD061FECC5DC006CCFC1 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6317CD0A1FECC5DC006CCFC1 /* Debug */ = {
